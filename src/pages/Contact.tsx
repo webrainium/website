@@ -69,19 +69,19 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-  EMAILJS_SERVICE_ID,
-  EMAILJS_TEMPLATE_ID,
-  {
-    from_name: formData.name,
-    reply_to: formData.email,
-    company: formData.company || "-",
-    project_type: formData.projectType || "-",
-    message: formData.message,
-    subject: "New message from WebrAInium",
-    to_email: "webrainium.team@gmail.com",
-  },
-  EMAILJS_PUBLIC_KEY
-);
+          EMAILJS_SERVICE_ID,
+          EMAILJS_TEMPLATE_ID,
+            {
+              from_name: formData.name,
+              reply_to: formData.email,
+              company: formData.company || "-",
+              project_type: formData.projectType || "-",
+              message: formData.message,
+              subject: "New message from WebrAInium",
+              to_email: "webrainium.team@gmail.com",
+             },
+          EMAILJS_PUBLIC_KEY
+        );
 
       toast({
         title: "Message sent!",
